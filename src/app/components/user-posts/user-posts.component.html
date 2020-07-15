@@ -1,0 +1,22 @@
+<div class="album py-5 bg-light">
+
+  <div class="container">
+    <div class="d-flex justify-content-between">
+      <button type="button" class="btn btn-primary mb-5" (click)="createpost()">Create New Post</button>
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Order by
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+          <button class="dropdown-item" type="button">Date</button>
+          <button class="dropdown-item" type="button">Normal distribution</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row card-group">
+      <post-card class="col-md-4" *ngFor="let post of posts" [title]="post.title" [decription]="post.description"></post-card>
+    </div>
+  </div>
+</div>

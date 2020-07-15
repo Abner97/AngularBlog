@@ -1,0 +1,18 @@
+<form [formGroup]="loginForm" (ngSubmit)="login()" style="justify-content: center;">
+  <div class="form-group row mt-5 ml-3">
+    <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+    <div class="col-sm-10">
+      <input type="text" [formControl]="loginForm.controls.email" class="form-control" style="width: 25%;" id="staticEmail" value="email@example.com">
+    </div>
+  </div>
+  <div class="form-group row mt-5 ml-3">
+    <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+    <div class="col-sm-10">
+      <input  [formControl]="loginForm.controls.password" type="password" style="width: 25%" class="form-control" id="inputPassword">
+    </div>
+  </div>
+  <div class="form-group row mt-5 ml-4">
+   <button type="submit" class="btn btn-success"> Login</button>
+  </div>
+
+</form>
